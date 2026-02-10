@@ -1,0 +1,688 @@
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #000;
+    background-color: #FFF;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 138px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.05px;
+    line-height: 1.2;
+    padding: 18px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background-color: #FFF550;
+    color: #000;
+}
+
+.btn--primary:hover {
+    background-color: #f0e640;
+}
+
+.btn--outline {
+    background-color: #FFF;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.btn--outline:hover {
+    background-color: #f5f5f5;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+    position: fixed;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 48px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF550;
+    border-radius: 100px;
+    padding: 20px 48px;
+    max-width: 100%;
+}
+
+.header__logo img {
+    height: 44px;
+    width: auto;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+}
+
+.header__link {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.39px;
+    line-height: 0.95;
+    color: #000;
+    transition: opacity 0.3s ease;
+}
+
+.header__link:hover,
+.header__link.active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1.5px;
+}
+
+.header__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 24px;
+    height: 24px;
+}
+
+.header__burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.header__burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.header.scrolled .header__nav {
+    background-color: rgba(255, 245, 80, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+    padding: 25px 138px 70px;
+    gap: 78px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 0.95;
+    letter-spacing: -3.24px;
+    color: #F2F2F2;
+}
+
+.hero__text-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+}
+
+.hero__subtitle {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.09;
+    color: #F2F2F2;
+    max-width: 716px;
+}
+
+.hero__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #F2F2F2;
+    max-width: 500px;
+}
+
+/* ============================================
+   STATEMENT SECTION
+   ============================================ */
+.statement {
+    width: 100%;
+    overflow: hidden;
+}
+
+.statement__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   MEDIA SECTION (APE)
+   ============================================ */
+.media-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.media-section__img {
+    width: 100%;
+    height: 615px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ============================================
+   COMPETENZE SECTION
+   ============================================ */
+.competenze {
+    background-color: #FFF550;
+    padding: 80px 0;
+}
+
+.competenze .content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.competenze__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.competenze__title {
+    font-weight: 400;
+    font-size: 76px;
+    line-height: 0.95;
+    letter-spacing: -3.47px;
+    color: #000;
+    max-width: 800px;
+}
+
+.competenze__desc {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.09;
+    letter-spacing: -0.29px;
+    color: #000;
+    max-width: 800px;
+}
+
+.competenze__cards-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   CLIENTI SECTION
+   ============================================ */
+.clienti {
+    background-color: #F5F0E8;
+    padding: 80px 0;
+}
+
+.clienti .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.clienti__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.09;
+    letter-spacing: -0.29px;
+    color: #000;
+    text-align: center;
+}
+
+.clienti__logos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.clienti__marquee {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.cta {
+    width: 100%;
+    overflow: hidden;
+}
+
+.cta__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background-color: #1a1a2e;
+    color: #FFF;
+    padding: 0;
+}
+
+.footer__inner {
+    padding-top: 0;
+    padding-bottom: 96px;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 64px 0;
+}
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__logo {
+    height: 42px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer__tagline {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #FFF;
+    opacity: 0.7;
+}
+
+.footer__nav {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+}
+
+.footer__nav a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #FFF;
+    transition: opacity 0.3s ease;
+}
+
+.footer__nav a:hover {
+    opacity: 0.7;
+}
+
+.footer__bottom {
+    display: flex;
+    gap: 54px;
+    padding-top: 64px;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer__info-label {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 1.4;
+    color: #FFF;
+    margin-bottom: 4px;
+}
+
+.footer__info p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__info p strong {
+    font-weight: 600;
+    color: #FFF;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET (800px - 1439px)
+   ============================================ */
+@media only screen and (max-width: 1439px) {
+    .content {
+        padding: 0 48px;
+    }
+
+    /* Header */
+    .header {
+        padding: 0 28px;
+    }
+
+    .header__nav {
+        padding: 16px 48px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero__content {
+        padding: 25px 48px 70px;
+        gap: 50px;
+    }
+
+    .hero__title {
+        font-size: 72px;
+        letter-spacing: -2px;
+    }
+
+    .hero__subtitle {
+        font-size: 28px;
+    }
+
+    .hero__description {
+        font-size: 16px;
+    }
+
+    /* Competenze */
+    .competenze__title {
+        font-size: 64px;
+        letter-spacing: -2.46px;
+    }
+
+    .competenze__desc {
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footer__inner {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE (< 800px)
+   ============================================ */
+@media only screen and (max-width: 799px) {
+    .content {
+        padding: 0 24px;
+    }
+
+    /* Header */
+    .header {
+        top: 18px;
+        padding: 0 16px;
+    }
+
+    .header__nav {
+        padding: 17px 24px;
+    }
+
+    .header__menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #FFF550;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        z-index: 9998;
+    }
+
+    .header__menu.open {
+        display: flex;
+    }
+
+    .header__link {
+        font-size: 24px;
+    }
+
+    .header__burger {
+        display: flex;
+        z-index: 9999;
+    }
+
+    .header__logo {
+        z-index: 9999;
+    }
+
+    .header__logo img {
+        height: 24px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 100vh;
+        height: 100vh;
+    }
+
+    .hero__content {
+        padding: 25px 24px 70px;
+        gap: 40px;
+    }
+
+    .hero__title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .hero__subtitle {
+        font-size: 22px;
+    }
+
+    .hero__description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .hero__text-group {
+        flex-direction: column;
+    }
+
+    /* Media section */
+    .media-section__img {
+        height: 400px;
+    }
+
+    /* Competenze */
+    .competenze {
+        padding: 64px 0;
+    }
+
+    .competenze .content {
+        gap: 32px;
+    }
+
+    .competenze__header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .competenze__title {
+        font-size: 36px;
+        letter-spacing: -0.78px;
+    }
+
+    .competenze__desc {
+        font-size: 20px;
+        letter-spacing: -0.2px;
+    }
+
+    /* Clienti */
+    .clienti {
+        padding: 64px 0;
+    }
+
+    .clienti__title {
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footer__inner {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 64px;
+    }
+
+    .footer__top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer__logo {
+        height: 32px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - SMALL MOBILE (< 480px)
+   ============================================ */
