@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,13 +15,13 @@
     <header class="header" id="header">
         <nav class="header__nav">
             <a href="#" class="header__logo">
-                <img src="img/Logo.png" alt="Diventa Logo">
+                <img src="img/logo_header_light.svg.svg" alt="Diventa Logo">
             </a>
             <ul class="header__menu" id="navMenu">
                 <li><a href="#" class="header__link active">Home</a></li>
-                <li><a href="#competenze" class="header__link">Aree di competenza</a></li>
+                <li><a href="#servizi" class="header__link">Aree di competenza</a></li>
                 <li><a href="#soluzioni" class="header__link">Soluzioni</a></li>
-                <li><a href="#" class="header__link">Case studies</a></li>
+                <li><a href="#case_studies" class="header__link">Case studies</a></li>
                 <li><a href="#contatti" class="header__link">Contatti</a></li>
             </ul>
             <button class="header__burger" id="burgerBtn" aria-label="Apri menu">
@@ -34,9 +34,10 @@
 
     <!-- HERO -->
     <section class="hero">
-        <img src="img/above_background.png" alt="Diventa Hero" class="hero__bg">
-        <div class="hero__overlay"></div>
+        <img src="img/above_background.webp" alt="Above the Fold" class="hero__cover">
+
         <div class="hero__content">
+
             <h1 class="hero__title">Diventa ciò che vuoi trasformare.</h1>
             <div class="hero__text-group">
                 <p class="hero__subtitle">Dalla strategia alla comunicazione, dal comportamento al digitale: accompagniamo imprese e istituzioni in ogni fase del cambiamento</p>
@@ -45,42 +46,137 @@
         </div>
     </section>
 
-    <!-- SEZIONE STATEMENT -->
+    <!-- SEZIONE EDITORIALE -->
     <section class="statement">
-        <img src="img/Editorial_Intro_section.png" alt="Diventare è un processo di evoluzione consapevole" class="statement__img">
-    </section>
-
-    <!-- SEZIONE IMMAGINE - APE -->
-    <section class="media-section">
-        <img src="img/media-section.png" alt="Diventa - Trasformazione" class="media-section__img">
-    </section>
-
-    <!-- SEZIONE 2 - AREE DI COMPETENZA -->
-    <section class="competenze" id="competenze">
-        <div class="content">
-            <div class="competenze__header">
-                <h2 class="competenze__title">Dove la strategia incontra l'evoluzione.</h2>
-                <a href="#soluzioni" class="btn btn--outline">Scopri i nostri servizi</a>
+        <div class="editoriale">
+            <span class="editoriale__overline">Dove comportamento, strategia e design si incontrano.</span>
+            <h2 class="editoriale__title">Diventare è un processo di evoluzione consapevole.</h2>
+            <div class="editoriale__columns">
+                <div class="editoriale__col">
+                    <p>Diventa è una società di consulenza che integra strategia, behavioural science e design della comunicazione per accompagnare organizzazioni pubbliche e private nei loro percorsi di trasformazione.</p>
+                    <p>Aiutiamo imprese, enti e persone a tradurre l'innovazione in un processo concreto, misurabile e condiviso.</p>
+                    <p>Crediamo che l'innovazione non nasca solo dalla tecnologia, ma dalla capacità di evolvere come sistema umano.</p>
+                    <p>Unendo rigore analitico, creatività e scienze</p>
+                </div>
+                <div class="editoriale__col">
+                    <p>comportamentali, aiutiamo le organizzazioni a comprendere i bisogni, migliorare i contesti decisionali e costruire relazioni più efficaci tra persone, istituzioni e cittadini.</p>
+                    <p>Il nostro approccio trasforma dati e insight in strategie operative che favoriscono apprendimento, fiducia e crescita collettiva.</p>
+                    <p>Ogni intervento è pensato per rendere il cambiamento non solo possibile, ma desiderabile  un processo continuo di divenire che mette le persone al centro delle decisioni.</p>
+                </div>
             </div>
-            <p class="competenze__desc">Accompagniamo aziende, enti e istituzioni lungo l'intero ciclo della trasformazione: dalla definizione strategica alla gestione dei comportamenti, dalla formazione alla digitalizzazione dei processi.</p>
-            <img src="img/Card_Services_container.png" alt="Le nostre aree di competenza" class="competenze__cards-img">
+            <a href="#contatti" class="editoriale__btn">Prenota una consulenza</a>
         </div>
     </section>
+
+    <!-- SEZIONE 1 - IMMAGINE - APE -->
+    <section class="ape-section">
+        <img src="img/media-section.png" alt="Diventa Immagine Ape" class="ape-section__img">
+    </section>
+
+    <!-- SEZIONE 2 - SERVIZI -->
+    <section class="servizi" id="servizi">
+
+        <div class="content">
+            <div class="servizi__header">
+                <h2 class="servizi__title">Dove la strategia incontra l'evoluzione.</h2>
+                <a href="#servizi" class="btn btn--outline">Scopri i nostri servizi</a>
+            </div>
+            <p class="servizi__desc">Accompagniamo aziende, enti e istituzioni lungo l'intero<br>ciclo della trasformazione: dalla definizione strategica<br>alla gestione dei comportamenti, dalla formazione alla<br>digitalizzazione dei processi.</p>
+
+
+            <div class="servizi__cards">
+
+                <div class="servizio_column">
+                    <div class="servizio_card_dark">
+                        <h3>Strategy &amp; Transformation</h3>
+                        <p>Rendiamo le organizzazioni più agili e pronte al futuro.</p>
+                        <figure class="servizio_card_figure">
+                            <img src="img/img_servizio_1.webp" alt="Strategy & Transformation">
+                        </figure>
+                    </div>
+                </div><!-- End column -->
+
+                <div class="servizio_column">
+                    <div class="servizio_card_light">
+                        <h3>Learning &amp; Empowerment</h3>
+                        <p>Rendiamo la formazione uno strumento di cambiamento.</p>
+                        <figure class="servizio_card_figure">
+                            <img src="img/img_servizio_2.webp" alt="Learning & Empowerment">
+                        </figure>
+                    </div>
+                </div><!-- End column -->
+
+                <div class="servizio_column">
+                    <div class="servizio_card_dark">
+                        <h3>Behavioural Change &amp; Communication</h3>
+                        <p>Rendiamo la formazione uno strumento di cambiamento.</p>
+                        <figure class="servizio_card_figure">
+                            <img src="img/img_servizio_3.webp" alt="Behavioural Change & Communication">
+                        </figure>
+                    </div>
+                </div><!-- End column -->
+
+                <div class="servizio_column">
+                    <div class="servizio_card_light">
+                        <h3>Digital Solutions</h3>
+                        <p>Mettiamo la tecnologia al servizio delle persone.</p>
+                        <figure class="servizio_card_figure">
+                            <img src="img/img_servizio_4.webp" alt="Digital Solutions">
+                        </figure>
+                    </div>
+                </div><!-- End column -->
+
+            </div><!-- End servizi__cards -->
+
+        </div> <!-- End content-->
+    </section> <!-- End servizi-->
+
 
     <!-- SEZIONE 3 - CLIENTI -->
     <section class="clienti">
         <div class="content">
             <p class="clienti__title">Abbiamo lavorato con</p>
-            <div class="clienti__logos">
-                <img src="img/brand_marquee.png" alt="Partner e clienti" class="clienti__marquee">
+            
+            <div class="clienti__icone">
+
+                <div class="icon_clienti">
+                <img src="img/regione_lazio_1.webp" alt="Icona Regione Lazio">
+                <img src="img/roma_2.webp" alt="Icona Roma">
+                <img src="img/aci_3.webp" alt="Icona Aci">
+                <img src="img/zetema_4.webp" alt="Icona zetema">
+                </div>
+
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- SEZIONE 4 - CONTATTI -->
+
+    <section class="contatti"  id="contatti">
+        <img src="img/contatti_background.webp" alt="background hero contatti " class="contatti__cover">
+
+
+        <div class="contatti__content">
+
+            <span>
+                Diventa ciò che progetti
+            </span>
+
+            <h2 class="contatti__title">Scopri come trasformiamo insight in risultati.</h2>
+            <div class="hero__text-group">
+             
+                <button>
+                    <a href="#contatti">Contatti</a>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- SEZIONE 4 - CTA -->
-    <section class="cta" id="contatti">
-        <img src="img/cta-bg.png" alt="Scopri come trasformiamo insight in risultati" class="cta__img">
-    </section>
+
+
+
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -92,7 +188,7 @@
                 </div>
                 <ul class="footer__nav">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#competenze">Aree di competenza</a></li>
+                    <li><a href="#servizi">Aree di competenza</a></li>
                     <li><a href="#soluzioni">Soluzioni</a></li>
                     <li><a href="#">Case studies</a></li>
                     <li><a href="#contatti">Contatti</a></li>
